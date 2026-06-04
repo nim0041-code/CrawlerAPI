@@ -1,0 +1,13 @@
+先运行
+cloudflared tunnel --url http://127.0.0.1:8000
+
+每次重启cloudflare tunnel 地址会换
+
+再Http Request填
+(https://xxxx.trycloudflare.com/scrape-product)
+
+https://median-cosmetic-phases-carolina.trycloudflare.com/scrape
+
+
+https://xxxx.trycloudflare.com/scrape
+

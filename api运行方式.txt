@@ -1,0 +1,25 @@
+
+python @app.post("/scrape")
+def scrape_product(req: ScrapeRequest):
+    if not is_valid_product_url(req.url):
+        return {
+            "status": "failed",
+            "error_type": "invalid_url",
+            "message": "商品链接格式无效",
+            "data": None
+        }
+
+    try:
+        result = run_scraper(req)
+        return result
+    except Exception as e:
+        return {
+            "status": "failed",
+            "error_type": "scrape_failed",
+            "message": str(e),
+            "data": None
+        }
+
+cd C:\Users\Administrator\Documents\Codex\2026-06-03\files-mentioned-by-the-user-scrape\outputs
+python -m pip install -r requirements_api.txt
+python -m uvicorn taobao_api:app --host 127.0.0.1 --port 8000 --reload

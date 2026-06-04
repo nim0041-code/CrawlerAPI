@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "data": {
+    "title": "...",
+    "price": "...",
+    "images": [],
+    "local_image_paths": [],
+    "description": "...",
+    "sku": []
+  }
+}
